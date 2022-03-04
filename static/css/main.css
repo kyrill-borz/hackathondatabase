@@ -12,6 +12,11 @@ body {
     margin: 0;
 }
 
+.table{
+    background-color: #f1f7dc;
+    padding-left: auto;
+    padding-right: auto;
+}
 #container {
     margin: 2em auto;
     width: 740px;
