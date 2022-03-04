@@ -37,13 +37,13 @@ def table():
             datatags=data.columns.values
             myData = data.values
 
-            return render_template('table.html', data=myData, datatags=datatags,size=len(datatags), the_title='Information')
+            return render_template('table.html', data=myData, datatags=datatags,size=len(datatags), the_title='Information | MCCC')
 	# to read the csv file using the pandas library
         data = load_data(db)
         datatags=data.columns.values
         myData = data.values
 
-        return render_template('table.html', data=myData, datatags=datatags,size=len(datatags), the_title='Information')
+        return render_template('table.html', data=myData, datatags=datatags,size=len(datatags), the_title='Information | MCCC')
 
 
 
