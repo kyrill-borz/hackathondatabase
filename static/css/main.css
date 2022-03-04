@@ -35,7 +35,7 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 100%;
     color: #000;
-    background: #00217a;
+    background: #9fd3c7;
     margin: 0;
 }
 
@@ -44,16 +44,16 @@ table {
     width: 100%;
     border: 1px solid #ddd;
   }
-  
+
   th, td {
     text-align: left;
     padding: 16px;
   }
-  
+
   tr:nth-child(even) {
     background-color: #f2f2f2
   }
-  
+
 #container {
     margin: 2em auto;
     width: auto;
@@ -86,6 +86,11 @@ img {
 	margin: auto;
 	max-width: 100%;
 }
+
+/* button */
+button {background-color: #9fd3c7}
+button:hover {background-color: #78baaa}
+button:click {background-color: #78baaa}
 
 /* links */
 
