@@ -6,7 +6,10 @@
 <h1>{{ the_title }}</h1>
 <div class="column is-4 is-offset-4">
     <h3 class="title">Data</h3>
-    <h4 class="subtitle">{{ message }}</h4>
+    <h4 class="subtitle">This is a tool that allows you to choose how important certain aspects of a material are, and then helps select the perfect concrete for you! </h4>
+    <br>
+    <p>please fill in how important these aspects are to you between 0 and 100</p>
+    <p>you can also input your latitude location, and this will tell you how much carbon will be emitted in getting this concrete to you</p>
     <div class="box">
         <form method = "POST" action="{{ url_for('table')}}">
             <div class="field">

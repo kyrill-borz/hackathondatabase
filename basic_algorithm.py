@@ -1,8 +1,9 @@
 """ Loads the CSV file and filters to components of interest. """
 
+__author__ = "Eve Sherratt, John Jessop"
+
 # External imports
 import pandas as pd
-import numpy as np
 
 def load_data(csv_file):
     """ Loads the CSV file and filters to components of interest. """
@@ -24,9 +25,8 @@ def create_score(df, money_weight=100, eco_weight=100, speed_weight=100):
 
     df2["Speed score (%)"] = df["Construction times"] * 10
 
-    df2["Overall score (%)"] = (((df2["Money score (%)"]*money_weight) + (df2["Eco score (%)"]*eco_weight) + (df2["Speed score (%)"]*speed_weight)) /  (money_weight + eco_weight + speed_weight)).astype(int)
-    print(df2)
-    return df2
 
-df = load_data("static/data/concrete.csv")
-df = create_score(df, money_weight=100, eco_weight=100, speed_weight=100)
+    total_weight = int(money_weight) + int(eco_weight) + int(speed_weight)
+    df2["Overall score (%)"] = (((df2["Money score (%)"]*int(money_weight)) + (df2["Eco score (%)"]*int(eco_weight)) + (df2["Speed score (%)"]*int(speed_weight))) /  total_weight).round().astype(int)
+
+    return df2

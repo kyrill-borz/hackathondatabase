@@ -4,12 +4,7 @@ import pandas as pd
 import requests
 import uuid
 from flask import Flask, session, render_template, request, flash, redirect, url_for, jsonify
-from flask_session import Session
-from simplejson import load
-from sqlalchemy import create_engine
-from sqlalchemy.orm import scoped_session, sessionmaker
-from datetime import datetime   
-from basic_algorithm import load_data
+from basic_algorithm import load_data,create_score
 
 app = Flask(__name__)
 db = "static/data/concrete.csv"
@@ -18,12 +13,13 @@ db = "static/data/concrete.csv"
 @app.route('/', methods = ['POST', 'GET'])
 def index():
     if request.method == 'POST':
-            no1=request.form.get('weighting 1')
-            no2=request.form.get('weighting 2')
-            no3=request.form.get('weighting 3')
+            no1=int(request.form.get('weighting 1'))
+            no2=int(request.form.get('weighting 2'))
+            no3=int(request.form.get('weighting 3'))
             longitude=request.form.get('longitude')
             latitude=request.form.get('latitude')
             data = load_data(db)
+            data=create_score(data, money_weight=no1, eco_weight=no2, speed_weight=no3)
             datatags=data.columns.values
             myData = data.values
             
@@ -32,13 +28,24 @@ def index():
 
 @app.route('/table', methods = ['POST', 'GET'])
 def table():
-    
+        if request.method == 'POST':
+            no1=request.form.get('weighting 1')
+            no2=request.form.get('weighting 2')
+            no3=request.form.get('weighting 3')
+            longitude=request.form.get('longitude')
+            latitude=request.form.get('latitude')
+            data = load_data(db)
+            data=create_score(data, money_weight=no1, eco_weight=no2, speed_weight=no3)
+            datatags=data.columns.values
+            myData = data.values
+            
+            return render_template('table.html', data=myData, datatags=datatags,size=len(datatags), the_title='Information')
 	# to read the csv file using the pandas library 
-    data = load_data(db)
-    datatags=data.columns.values
-    myData = data.values
-    
-    return render_template('table.html', data=myData, datatags=datatags,size=len(datatags), the_title='Information')
+        data = load_data(db)
+        datatags=data.columns.values
+        myData = data.values
+        
+        return render_template('table.html', data=myData, datatags=datatags,size=len(datatags), the_title='Information')
 
 
 
