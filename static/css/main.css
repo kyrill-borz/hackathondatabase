@@ -81,8 +81,8 @@ h1, h2 {
     font-family: 'Droid Serif', serif;
     font-size: 3em;
     margin: 0;
-		padding-bottom: 1em;
-        padding-top: 0.25em;
+		padding-bottom: 0.1em;
+        padding-top: 0.1em;
 }
 
 
@@ -107,7 +107,12 @@ img {
 }
 
 /* button */
-button {background-color: #9fd3c7}
+button {background-color: #9fd3c7;
+    border: None;
+    padding: 0.5vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw}
+    /* border-color: #9fd3c7;} */
 button:hover {background-color: #78baaa}
 button:click {background-color: #78baaa}
 
