@@ -1,0 +1,9 @@
+Material: Name,Material: Volume,Material: Density (ton/m3),Material weight (ton),Material: Waste rate (%),Overall material weight (waste inc.)(tons),Material: Embodied Carbon (tonCO2/ton),Overall material EC (tonCO2e),Material: Transport coefficient (%),Overall transport EC (tonCO2e),Material: Construction coefficient (%),Overall Construction EC tonCO2e),Material: End of life coefficient (%),Overall End of life EC (tonCO2e),Material: Replacements over 60 years,Overall EC sum (tonCO2e)
+Concrete -  Cast In Situ 50% GGBS RC25/30,0.02,2.3,0.035938,0.05,0.037734,0.072,0.002717,0.03,0.000082,0.07,0.000181,0.02,0.000054,0,0.003034
+Concrete - Cast In Situ 25/30,0.02,2.2,0.034375,0.05,0.036094,0.119,0.004295,0.03,0.000129,0.07,0.000286,0.02,0.000086,0,0.004796
+Concrete - Precast 40/50,0.02,2.2,0.034375,0.01,0.034719,0.148,0.005138,0.03,0.000154,0.07,0.000356,0.02,0.000103,0,0.005751
+Concrete - Precast 50% GGBS,0.02,2.2,0.034375,0.01,0.034719,0.097,0.003368,0.03,0.000101,0.07,0.000233,0.02,0.000067,0,0.00377
+Concrete - Precast Block,0.02,2.3,0.035938,0.2,0.043125,0.093,0.004011,0.03,0.00012,0.07,0.000234,0.02,0.00008,0,0.004445
+Concrete - Screed,0.02,1.9,0.029688,0.05,0.031172,0.163,0.005081,0.03,0.000152,0.07,0.000339,0.02,0.000102,0,0.005674
+Concrete in situ - Reinforced RC 25/30,0.02,2.3,0.035938,0.05,0.037734,0.129,0.004868,0.03,0.000146,0.07,0.000325,0.02,0.000097,0,0.005436
+Concrete Precast - RC 40/50,0.02,2.3,0.035938,0.01,0.036297,0.178,0.006461,0.03,0.000194,0.07,0.000448,0.02,0.000129,0,0.007232
