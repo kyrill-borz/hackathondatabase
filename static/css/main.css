@@ -1,3 +1,4 @@
+/* Overall formatting */
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -43,6 +44,7 @@
 
 #nav_img {padding-left: 1vw;}
 
+/* Main body text */
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 100%;
@@ -51,10 +53,14 @@ body {
     background: #ffffff;
     margin: 0;
 }
+
+/* Image formatting */
 img {
     width:50px;
     float:left;
 }
+
+/* Table formatting */
 table {
     border-spacing: 0;
     width: 100%;
@@ -77,6 +83,8 @@ table {
     background: #ffffff;
 }
 
+
+/* Heading formatting */
 h1, h2 {
     font-family: 'Droid Serif', serif;
     font-size: 3em;
