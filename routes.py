@@ -1,6 +1,9 @@
-""" Base app. """
+""" Base web app. """
 
+# Etxernal imports
 from flask import Flask, render_template, request
+
+# Internal imports
 from basic_algorithm import load_data,create_score
 
 app = Flask(__name__)
