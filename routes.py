@@ -10,16 +10,23 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 from datetime import datetime   
 
 app = Flask(__name__)
-#db = scoped_session()
+db = ""
 
 # two decorators, same function
 @app.route('/')
 def index():
     return render_template('index.html', the_title='Database Homepage')
 
-@app.route('/symbol.html')
-def symbol():
-    return render_template('symbol.html', the_title='Tiger As Symbol')
+@app.route('/table')
+def table():
+    
+ 
+	# to read the csv file using the pandas library 
+    data = pd.read_csv(db, header=0) 
+ 
+    myData = data.values 
+    return render_template('symbol.html', data=myData, the_title='Tiger As Symbol')
+
 
 
 if __name__ == '__main__':

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- to be filled by the Python script -->
+<h1>{{ the_title }}</h1>
+
+<!-- note how items from the "static" folder are linked -->
+<table class="table table-striped table-sm"> 
+    <tbody> 
+      {% for value in data %} 
+      <tr> 
+            {% for item in value %}
+        <td>{{ item }}</td> 
+            {% endfor %}
+      </tr> 
+      {% endfor %} 
+    </tbody> 
+  </table> 
+{% endblock %}
