@@ -18,7 +18,7 @@
       {% for value in data %} 
       <tr> 
             {% for item in value %}
-        <td class="{{item}}">{{ item }}</td> 
+        <td name="{{item}}">{{ item }}</td> 
             {% endfor %}
       </tr> 
       {% endfor %} 
@@ -26,6 +26,16 @@
   </table> 
 
   <script>
+      for (var i=0; i>100;i++){
+          var number = document.getElementsByName(i.toString());
+          if (i>60){
+              number.style.color="#BAC4BA";
+          } else if (i>40){
+              number.style.color="#E0CDAA";
+          } else {
+              number.style.color="#B27770";
+          }
+      }
     function sortTable(n) {
       var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
       table = document.getElementById("myTable");
