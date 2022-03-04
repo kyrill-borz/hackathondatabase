@@ -17,7 +17,7 @@ EARTH_RADIUS = 6.371e6 # Average radius of the Earth in metres
 def load_data(csv_file):
     """ Loads the CSV file and filters to components of interest. """
 
-    df = pd.read_csv(csv_file, usecols=("Material: Name","Company name","Construction times","Average cost/cubic metre","Overall EC sum (tonCO2e)"))
+    df = pd.read_csv(csv_file, usecols=("Material: Name","Company name","Construction times/10","Average cost/cubic metre","Overall EC sum (tonCO2e)"))
 
     return df
 
@@ -32,7 +32,7 @@ def create_score(df, money_weight, eco_weight, speed_weight, longitude, latitude
 
     df2["Eco score (%)"] = (100 - (df["Overall EC sum (tonCO2e)"] * 10000)).round().astype(int)
 
-    df2["Speed score (%)"] = df["Construction times"] * 10
+    df2["Speed score (%)"] = df["Construction times/10"] * 10
 
     df2["Distance (m)"] = calculate_flight_distance("static/data/company_data.json", "A", longitude, latitude)
 
