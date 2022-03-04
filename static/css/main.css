@@ -9,6 +9,8 @@
     position: relative;
     margin: 2px;
     padding: 2px;
+    padding-bottom: 2vw;
+    padding-top: 2vw;
     width:100%;
     opacity: 0.6;
   }
@@ -36,6 +38,8 @@
     background-color: #04AA6D;
     color: white;
   }
+
+#nav_img {padding-left: 1vw;}
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
