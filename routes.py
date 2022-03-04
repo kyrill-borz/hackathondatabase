@@ -35,7 +35,7 @@ def table():
             longitude=request.form.get('longitude')
             latitude=request.form.get('latitude')
             data = load_data(db)
-            data=create_score(data, money_weight=no1, eco_weight=no2, speed_weight=no3)
+            data=create_score(data, no1, no2,no3,int(longitude),int(latitude))
             datatags=data.columns.values
             myData = data.values
             

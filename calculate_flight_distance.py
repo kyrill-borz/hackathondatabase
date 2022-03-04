@@ -46,7 +46,3 @@ def calculate_flight_distance(location_json, company_name, user_latitude, user_l
         - 2 * from_point_radius * to_points_radius * cos_central_angle)
 
     return distance
-
-from basic_algorithm import load_data
-df = load_data("static/data/concrete.csv")
-dist = calculate_flight_distance("static/data/company_data.json", "A", 88, 32)
