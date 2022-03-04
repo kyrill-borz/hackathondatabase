@@ -6,6 +6,12 @@
 	<title>{{ the_title }}</title>
   <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Source+Sans+Pro" rel="stylesheet">
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="static/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
@@ -13,9 +19,9 @@
     <nav class="navbar" style="position: fixed; width:100%; background-color: #000114; opacity: 0.6;">
         <div class="container">
         <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">                   
+        <div class="navbar-brand">
         <a href="{{ url_for('index')}}"></a>
-    
+
         </div>
     </nav>
             <div id="navbarMenuHeroA" class="navbar-menu">
@@ -23,11 +29,11 @@
 
                     <a href="{{ url_for('index')}}" class="navbar-item corner">
                         Home
-                    </a>                            
+                    </a>
                         <a href="{{ url_for('table') }}" class="navbar-item corner">
                                 Tables
                         </a>
-                    
+
                 </div>
             </div>
         </div>
