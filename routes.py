@@ -25,8 +25,8 @@ def table():
     data = pd.read_csv(db, header=0) 
     datatags=data.columns.values
     myData = data.values
-    print(datatags)
-    return render_template('table.html', data=myData, datatags=datatags, the_title='Information')
+    
+    return render_template('table.html', data=myData, datatags=datatags,size=len(datatags), the_title='Information')
 
 
 
