@@ -59,6 +59,11 @@ img {
 	max-width: 100%;
 }
 
+/* button */
+button {background-color: #9fd3c7}
+button:hover {background-color: #78baaa}
+button:click {background-color: #78baaa}
+
 /* links */
 
 a {
