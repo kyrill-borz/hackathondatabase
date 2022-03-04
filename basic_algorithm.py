@@ -8,7 +8,6 @@ import json
 # External imports
 import numpy as np
 import pandas as pd
-from calculate_flight_distance import calculate_flight_distance
 
 # Constants
 EARTH_RADIUS = 6.371e6 # Average radius of the Earth in metres
