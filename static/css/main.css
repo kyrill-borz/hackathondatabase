@@ -111,7 +111,9 @@ button {background-color: #9fd3c7;
     border: None;
     padding: 0.5vw;
     margin-top: 1vw;
-    margin-bottom: 1vw}
+    margin-bottom: 1vw;
+    display: flex;
+    justify-content: center}
     /* border-color: #9fd3c7;} */
 button:hover {background-color: #78baaa}
 button:click {background-color: #78baaa}
@@ -129,7 +131,11 @@ a:hover {
 }
 
 /* input */
-.control {display: flex; padding: 2px; margin: 2px}
+.control {display: flex;
+    padding: 2px;
+    margin: 2px;
+    justify-content: center;
+    }
 
 /* media queries */
 
