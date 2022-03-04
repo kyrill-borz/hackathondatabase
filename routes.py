@@ -1,9 +1,6 @@
-import os
-from pandas.core.base import SelectionMixin
-import pandas as pd
-import requests
-import uuid
-from flask import Flask, session, render_template, request, flash, redirect, url_for, jsonify
+""" Base app. """
+
+from flask import Flask, render_template, request
 from basic_algorithm import load_data,create_score
 
 app = Flask(__name__)
