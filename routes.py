@@ -1,6 +1,8 @@
 """ Base web app. """
 
-# Etxernal imports
+__author__ = "Eve Sherratt, John Jessop, Kyrill Borzenko"
+
+# External imports
 from flask import Flask, render_template, request
 
 # Internal imports
