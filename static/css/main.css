@@ -8,7 +8,7 @@
     overflow: hidden;
     position: absolute;
   }
-  
+
   /* Style the links inside the navigation bar */
   .navbar a {
     float: right;
@@ -18,19 +18,19 @@
     text-decoration: none;
     font-size: 17px;
   }
-  
+
   /* Change the color of links on hover */
   .navbar a:hover {
     background-color: #ddd;
     color: black;
   }
-  
+
   /* Add a color to the active/current link */
   .navbar a.active {
     background-color: #04AA6D;
     color: white;
   }
-  
+
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 100%;
@@ -73,8 +73,10 @@ h2 {
     font-size: 2em;
 }
 
+h4 {font-size: 1.7em;}
+
 p, li {
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 p.credit {
