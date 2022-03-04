@@ -16,8 +16,6 @@ def index():
             no1=int(request.form.get('weighting 1'))
             no2=int(request.form.get('weighting 2'))
             no3=int(request.form.get('weighting 3'))
-            longitude=request.form.get('longitude')
-            latitude=request.form.get('latitude')
             data = load_data(db)
             data=create_score(data, money_weight=no1, eco_weight=no2, speed_weight=no3)
             datatags=data.columns.values
@@ -32,10 +30,8 @@ def table():
             no1=request.form.get('weighting 1')
             no2=request.form.get('weighting 2')
             no3=request.form.get('weighting 3')
-            longitude=request.form.get('longitude')
-            latitude=request.form.get('latitude')
             data = load_data(db)
-            data=create_score(data, no1, no2,no3,int(longitude),int(latitude))
+            data=create_score(data, no1, no2,no3)
             datatags=data.columns.values
             myData = data.values
             

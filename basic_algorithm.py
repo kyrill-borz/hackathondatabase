@@ -22,7 +22,7 @@ def load_data(csv_file):
     return df
 
 
-def create_score(df, money_weight, eco_weight, speed_weight, longitude, latitude):
+def create_score(df, money_weight, eco_weight, speed_weight):
     """ Basic scoring system. """
 
     df2 = pd.DataFrame(df["Material: Name"])
@@ -33,8 +33,6 @@ def create_score(df, money_weight, eco_weight, speed_weight, longitude, latitude
     df2["Eco score (%)"] = (100 - (df["Overall EC sum (tonCO2e)"] * 10000)).round().astype(int)
 
     df2["Speed score (%)"] = df["Construction times/10"] * 10
-
-    df2["Distance (m)"] = calculate_flight_distance("static/data/company_data.json", "A", longitude, latitude)
 
     total_weight = int(money_weight) + int(eco_weight) + int(speed_weight)
     df2["Overall score (%)"] = (((df2["Money score (%)"]*int(money_weight)) + (df2["Eco score (%)"]*int(eco_weight)) + (df2["Speed score (%)"]*int(speed_weight))) /  total_weight).round().astype(int)
