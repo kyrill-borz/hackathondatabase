@@ -23,9 +23,9 @@ def table():
  
 	# to read the csv file using the pandas library 
     data = pd.read_csv(db, header=0) 
- 
-    myData = data.values 
-    return render_template('symbol.html', data=myData, the_title='Tiger As Symbol')
+    datatags=data.fieldnames
+    myData = data.values
+    return render_template('symbol.html', data=myData, datatags=datatags, the_title='Tiger As Symbol')
 
 
 
