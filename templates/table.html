@@ -18,8 +18,8 @@
       {% for value in data %}
       <tr>
             {% for item in value %}
-            
-        <td name="{{item}}">{{ item }}</td> 
+
+        <td id="{{item}}">{{ item }}</td> 
 
             {% endfor %}
       </tr>
@@ -29,13 +29,13 @@
 
   <script>
       for (var i=0; i>100;i++){
-          var number = document.getElementsByName(i.toString());
+          var number = document.getElementById(i.toString());
           if (i>60){
-              number.style.color="#BAC4BA";
+              number.style.backgroundColor="#BAC4BA";
           } else if (i>40){
               number.style.color="#E0CDAA";
           } else {
-              number.style.color="#B27770";
+              number.style.backgroundColor="#B27770";
           }
       }
     function sortTable(n) {
