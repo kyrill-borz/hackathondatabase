@@ -20,9 +20,9 @@ def index():
             data=create_score(data, money_weight=no1, eco_weight=no2, speed_weight=no3)
             datatags=data.columns.values
             myData = data.values
-            
+
             return render_template('table.html', data=myData, datatags=datatags,size=len(datatags), the_title='Information')
-    return render_template('index.html', the_title='Database Homepage')
+    return render_template('index.html', the_title='Home | MCCC')
 
 @app.route('/table', methods = ['POST', 'GET'])
 def table():
@@ -34,13 +34,13 @@ def table():
             data=create_score(data, no1, no2,no3)
             datatags=data.columns.values
             myData = data.values
-            
+
             return render_template('table.html', data=myData, datatags=datatags,size=len(datatags), the_title='Information')
-	# to read the csv file using the pandas library 
+	# to read the csv file using the pandas library
         data = load_data(db)
         datatags=data.columns.values
         myData = data.values
-        
+
         return render_template('table.html', data=myData, datatags=datatags,size=len(datatags), the_title='Information')
 
 

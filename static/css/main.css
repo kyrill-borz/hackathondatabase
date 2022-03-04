@@ -109,12 +109,15 @@ img {
 /* button */
 button {background-color: #9fd3c7;
     border: None;
-    padding: 0.5vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    padding-left: 4.5vw;
+    padding-right: 4.5vw;
+    margin-left: 39vw;
     margin-top: 1vw;
     margin-bottom: 1vw;
     display: flex;
     justify-content: center}
-    /* border-color: #9fd3c7;} */
 button:hover {background-color: #78baaa}
 button:click {background-color: #78baaa}
 
