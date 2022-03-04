@@ -17,14 +17,10 @@
     text-decoration: none;
     font-size: 17px;
   }
-<<<<<<< HEAD
   .navbar-end{
       float:right;
       padding-top: 10px;
   }
-=======
-
->>>>>>> 3a067896ff29f2031ba220b56ab8d54c3812a2cc
   /* Change the color of links on hover */
   .navbar a:hover {
     background-color: #ddd;
